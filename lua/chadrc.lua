@@ -4,13 +4,20 @@
 ---@type ChadrcConfig
 local M = {}
 
+local highlights = require "configs.highlights"
+
+local startscreen = require "configs.startscreen"
+
 M.ui = {
 	theme = "catppuccin",
 
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
+	hl_override = highlights.override,
+	hl_add = highlights.add,
+
+  nvdash = {
+    load_on_startup = true,
+    header = startscreen,
+  }
 }
 
 return M

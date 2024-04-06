@@ -17,10 +17,16 @@ return {
     end,
   },
   {
+    "nvimtools/none-ls.nvim",
+    event = { "BufEnter" },
+    opts = function()
+      return require "configs.null-ls"
+    end,
+  },
+  {
     "williamboman/mason.nvim",
     opts = require "configs.mason",
   },
-
 
   {
   	"nvim-treesitter/nvim-treesitter",
@@ -46,4 +52,17 @@ return {
     "nvim-tree/nvim-tree.lua",
     opts = require "configs.nvimtree",
   },
+	{
+		url = "https://github.com/MaggieLostKeys/nvim-ccutil.git",
+		event = "BufEnter",
+		opts = {
+			default_width = "100", -- default: 80
+			type_overrides = {
+				python = "80",
+				markdown = "200",
+				gitignore = "",
+				text = "", -- no column in text files
+			},
+		}
+	},
 }

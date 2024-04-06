@@ -1,4 +1,5 @@
 require "nvchad.options"
+require "filetypes"
 
 -- add yours here!
 

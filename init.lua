@@ -37,3 +37,8 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+
+-- TODO: make this so that its active when its a tsv file
+-- this means that tabs are actual \t and not spaces
+-- vim.cmd("set noexpandtab")
