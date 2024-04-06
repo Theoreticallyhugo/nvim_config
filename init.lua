@@ -38,6 +38,8 @@ vim.schedule(function()
   require "mappings"
 end)
 
+vim.g.lua_snippets_path = vim.fn.stdpath "config" .. "/lua/lua_snippets"
+
 
 -- TODO: make this so that its active when its a tsv file
 -- this means that tabs are actual \t and not spaces
