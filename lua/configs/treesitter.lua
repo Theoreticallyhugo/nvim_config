@@ -1,0 +1,37 @@
+local M = {
+  ensure_installed = {
+    "vim",
+    "vimdoc",
+    "python",
+    "lua",
+    "cpp",
+    "rust",
+    "comment",
+    "xml",
+    "yaml",
+    "toml",
+    "arduino",
+    "c",
+    "bash",
+    "dockerfile",
+    "git_config",
+    "git_rebase",
+    "gitattributes",
+    "gitcommit",
+    "gitignore",
+    "http",
+    "json",
+    "latex",
+    "make",
+    "markdown_inline",
+    "regex",
+    "tsv",
+    "csv",
+    "cuda",
+  },
+  indent = {
+    enable = true,
+  },
+}
+
+return M
