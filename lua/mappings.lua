@@ -77,3 +77,74 @@ map(
 )
 map("n", "<leader>fz", "") -- remap from fz to fj
 map("n", "<leader>fj", "<cmd> Telescope current_buffer_fuzzy_find <CR>", desc "Find in current buffer")
+
+
+--- Dap
+--
+map("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>", desc "Breakpoint at current line" )
+map("n", "<leader>dr", "<cmd> DapContinue <CR>", desc "Start / continue debugger" )
+
+-- dap python 
+map(
+  "n",
+  "<leader>dpr",
+  function ()
+    require("dap-python").set_method()
+  end,
+  desc "Run Python tests"
+)
+
+
+--- todo comments
+map(
+  "n",
+  "<leader>tn",
+  function()
+    require("todo-comments").jump_next()
+  end,
+  desc "Next todo-type comment"
+)
+map(
+  "n",
+  "<leader>tp",
+  function()
+    require("todo-comments").jump_prev()
+  end,
+  desc "Previous todo-type comment"
+
+)
+-- You can also specify a list of valid jump keywords
+map(
+  "n",
+  "<leader>te",
+  function()
+    require("todo-comments").jump_next({keywords = { "ERROR", "WARNING" }})
+  end,
+  desc "Next error/warning comment"
+)
+
+map(
+  "n",
+  "<leader>tf",
+  function()
+    require("todo-comments").jump_next({keywords = { "FIXME" }})
+  end,
+  desc "Next fixme comment"
+)
+
+map(
+  "n",
+  "<leader>tt",
+  function()
+    require("todo-comments").jump_next({keywords = { "TODO" }})
+  end,
+  desc "Next todo comment"
+)
+
+map(
+  "n",
+  "<leader>tj",
+  "<cmd> TodoTelescope <CR>",
+  desc "Next todo comment"
+)
+
