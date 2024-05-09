@@ -12,10 +12,13 @@ map("n", ";", ":", desc "CMD enter command mode" )
 map("i", "jk", "<ESC>", desc "superior escape")
 map("n", "QQ", ":qa <CR>", desc "quit all if there are no unsaved changes")
 map("n", "W!", ":w !sudo tee % <CR>", desc "save file as sudo when write protected")
-map({ "n", "i", "v" }, "<C-s>", "<cmd> w <CR>")
+map({ "n", "i", "v" }, "<C-s>", "<cmd> w <CR>", desc "save file")
+-- insertion
+map("n", "<C-J>", "o<ESC>k")
+map("n", "<C-K>", "O<ESC>j")
 -- navigation
-map("n", "j", "gj")
-map("n", "k", "gk")
+map({"n", "v"}, "j", "gj")
+map({"n", "v"}, "k", "gk")
 -- updating
 map("n", "<leader>ua", ":Lazy sync <CR>", desc "update all plugins" )
 map("n", "<leader>um", ":MasonInstallAll <CR>", desc "update all mason plugins" )
