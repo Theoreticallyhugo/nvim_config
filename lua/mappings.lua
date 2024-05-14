@@ -22,6 +22,15 @@ map({"n", "v"}, "k", "gk")
 -- updating
 map("n", "<leader>ua", ":Lazy sync <CR>", desc "update all plugins" )
 map("n", "<leader>um", ":MasonInstallAll <CR>", desc "update all mason plugins" )
+-- formatting    
+map({ "n", "v" }, "<leader>mp", function()
+      require("conform").format({
+        lsp_fallback = true,
+        async = false,
+        timeout_ms = 2000,
+      })
+    end,  desc "Format file or range (in visual mode)"
+)
 
 --- LazyGit
 map("n", "<leader>gg", "<cmd> LazyGit <CR>", desc "Open LazyGit")

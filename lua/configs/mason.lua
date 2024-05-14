@@ -15,5 +15,6 @@ return {
     "stylua",
     "html-lsp",
     "prettier",
+    "isort"
   }
 }
