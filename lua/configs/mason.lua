@@ -1,10 +1,10 @@
 return {
   ensure_installed = {
     "pyright",
-		"mypy",
-		"ruff",
-		"black",
-		"debugpy",
+    "mypy",
+    "ruff",
+    "black",
+    "debugpy",
     "rust-analyzer",
     "codelldb",
     "xmlformatter",
@@ -15,6 +15,6 @@ return {
     "stylua",
     "html-lsp",
     "prettier",
-    "isort"
-  }
+    "isort",
+  },
 }

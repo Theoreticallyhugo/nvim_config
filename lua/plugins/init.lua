@@ -125,4 +125,17 @@ return {
       crates.show()
     end,
   },
+  -- {
+  --   "rhysd/conflict-marker.vim",
+  -- },
+  {
+    "akinsho/git-conflict.nvim",
+    version = "v1.3.0",
+    -- config = true,
+    config = function()
+      require "configs.git-conflict"
+      -- require("copilot").setup({})
+    end,
+    lazy = false,
+  },
 }
