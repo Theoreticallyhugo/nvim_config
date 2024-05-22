@@ -162,6 +162,10 @@ M.add = {
     fg = C.yellow,
     bg = C.base,
   },
+  GitConflictCurrent = {
+    bg = C.green,
+    fg = C.blue,
+  },
 }
 
 return M
