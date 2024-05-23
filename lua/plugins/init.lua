@@ -15,8 +15,8 @@ return {
       require "configs.lspconfig"
     end,
     dependencies = {
-      "williamboman/mason-lspconfig.nvim"
-    }
+      "williamboman/mason-lspconfig.nvim",
+    },
   },
   {
     "nvimtools/none-ls.nvim",
@@ -91,19 +91,18 @@ return {
     },
     config = require("configs.nvim-dap-ui").config,
   },
-  -- {
-  --   "mfussenegger/nvim-dap-python",
-  --   ft= "python",
-  --   dependencies = {
-  --     "mfussenegger/nvim-dap",
-  --     "nvim-neotest/nvim-nio"
-  --   },
-  --   config = function(_, opts)
-  --     local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
-  --     require("dap-python").setup(path)
-  --     require("core.utils").load_mappings("dap_python")
-  --   end
-  -- },
+  {
+    "mfussenegger/nvim-dap-python",
+    ft = "python",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "rcarriga/nvim-dap-ui"
+    },
+    config = function()
+      local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
+      require("dap-python").setup(path)
+    end,
+  },
   {
     "rust-lang/rust.vim",
     ft = "rust",
