@@ -15,12 +15,12 @@ local options = {
     python = { "isort", "black" },
   },
 
-  format_on_save = {
-    -- These options will be passed to conform.format()
-    timeout_ms = 2000,
-    async = false,
-    lsp_fallback = true,
-  },
+  -- format_on_save = {
+  --   -- These options will be passed to conform.format()
+  --   timeout_ms = 2000,
+  --   async = false,
+  --   lsp_fallback = true,
+  -- },
 }
 
 require("conform").formatters.black = {
