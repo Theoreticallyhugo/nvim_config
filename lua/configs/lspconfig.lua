@@ -8,7 +8,8 @@ local servers = {
   "html",
   "pyright",
   "clangd",
-  "texlab"
+  "texlab",
+  "dockerls",
 }
 
 -- lsps with default config
