@@ -1,7 +1,8 @@
--- EXAMPLE
 local on_attach = require("nvchad.configs.lspconfig").on_attach
 local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
+
+--NOTE: DO NOT ADD THE RUST LSP IN HERE. it is added by rust-tools
 
 local lspconfig = require "lspconfig"
 local servers = {
