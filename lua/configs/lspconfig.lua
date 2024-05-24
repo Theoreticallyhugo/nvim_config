@@ -26,3 +26,11 @@ lspconfig.grammarly.setup {
   capabilities = capabilities,
   filetypes = { "tex", "txt", "markdown" },
 }
+
+-- bash-language-server
+lspconfig.bashls.setup {
+  on_attach = on_attach,
+  on_init = on_init,
+  capabilities = capabilities,
+  filetypes = { "sh", "bash", "zsh" },
+}

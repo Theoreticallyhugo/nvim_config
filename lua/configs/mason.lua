@@ -16,5 +16,7 @@ return {
     "html-lsp",
     "prettier",
     "isort",
+    "shellcheck",
+    "bash-language-server",
   },
 }
