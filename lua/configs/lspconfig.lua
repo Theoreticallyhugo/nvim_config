@@ -10,6 +10,7 @@ local servers = {
   "clangd",
   "texlab",
   "dockerls",
+  "jsonls",
 }
 
 -- lsps with default config
