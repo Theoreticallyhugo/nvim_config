@@ -8,6 +8,7 @@ local servers = {
   "html",
   "pyright",
   "clangd",
+  "texlab"
 }
 
 -- lsps with default config
@@ -24,7 +25,7 @@ lspconfig.grammarly.setup {
   on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities,
-  filetypes = { "tex", "txt", "markdown" },
+  filetypes = { "tex", "plaintex", "txt", "markdown" },
 }
 
 -- bash-language-server

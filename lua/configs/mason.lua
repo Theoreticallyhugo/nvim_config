@@ -18,5 +18,6 @@ return {
     "isort",
     "shellcheck",
     "bash-language-server",
+    "texlab",
   },
 }
