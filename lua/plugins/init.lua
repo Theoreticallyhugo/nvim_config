@@ -18,13 +18,13 @@ return {
       "williamboman/mason-lspconfig.nvim",
     },
   },
-  {
-    "nvimtools/none-ls.nvim",
-    event = { "BufEnter" },
-    opts = function()
-      return require "configs.null-ls"
-    end,
-  },
+  -- {
+  --   "nvimtools/none-ls.nvim",
+  --   event = { "BufEnter" },
+  --   opts = function()
+  --     return require "configs.null-ls"
+  --   end,
+  -- },
   {
     "williamboman/mason.nvim",
     opts = require "configs.mason",
