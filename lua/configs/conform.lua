@@ -25,6 +25,7 @@ local options = {
 
 require("conform").formatters.black = {
   prepend_args = { "-l", "79" },
+  timeout_ms = 3000,
   -- The base args are { "-filename", "$FILENAME" } so the final args will be
   -- { "-i", "2", "-filename", "$FILENAME" }
 }
